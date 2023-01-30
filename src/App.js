@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
-import mithunks from './thunk'
+import miThunk from './thunk'
 
 
 class App extends Component {
   constructor(props) {
     super(props)
-    const { mithunks } = props
-    mithunks('lala')
-    console.log(props)
+    const { miThunk } = props
+    miThunk('lala')
+    console.log( props)
   }
   render() {
     return (
@@ -36,7 +36,7 @@ class App extends Component {
 const mapStateToProps = state => state
 
 const mapDispatchToProps = dispatch => ({
-  mithunks: payload => dispatch(mithunks(payload))
+  miThunk: payload => dispatch(miThunk(payload)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

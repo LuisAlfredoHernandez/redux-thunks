@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
+import reducer from './thunk'
 
-
-function reducer(state = {}, action) {
-  return state
+const initialState = {
+  data:[1,2,3],
+  selected:1
 }
 
 const store = createStore(reducer, applyMiddleware(thunk))
