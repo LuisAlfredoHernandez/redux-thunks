@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
-import miThunk from './thunk'
+import {miThunk} from './thunk'
 
 
 class App extends Component {
